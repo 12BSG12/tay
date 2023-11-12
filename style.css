@@ -1,0 +1,131 @@
+.container {
+  max-width: 1140px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.tabs {
+  overflow: hidden;
+  border-radius: 15px;
+}
+.tabs__head {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.tabs__caption {
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 8px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: var(--color);
+  opacity: 0.6;
+  background: var(--primary);
+  transition: 0.25s;
+}
+.tabs__caption:hover {
+  opacity: 0.8;
+}
+.tabs__caption_active {
+  opacity: 1;
+  background: var(--primary);
+}
+.tabs__body {
+  background: var(--primary);
+  position: relative;
+  top: -2px;
+  transition: 0.25s;
+}
+.tabs__content {
+  display: none;
+  padding: 40px;
+  color: var(--color);
+  transform: scaleY(0.8);
+  opacity: 0;
+  transform-origin: center top;
+  -webkit-animation: showContent 0.6s forwards;
+  animation: showContent 0.6s forwards;
+}
+.tabs__content_active {
+  display: block;
+}
+
+.main {
+  padding: 15px 0;
+  --primary: rgb(163, 163, 163);
+  --color: #121212;
+}
+
+.main__content{
+  display: flex;
+  gap: 10px;
+}
+
+.main__img{
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.main__input {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.main__input-item{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.main__input-item input {
+  width: 200px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.main__btn{
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 210px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.main__btn:hover{
+  border: 1px solid #000;
+}
+
+
+@-webkit-keyframes showContent {
+  0% {
+    transform: scaleY(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes showContent {
+  0% {
+    transform: scaleY(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

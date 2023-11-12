@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>прога курсач</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="main">
+      <div class="container">
+        <div class="main__tabs tabs">
+          <div class="tabs__head">
+            <div class="tabs__caption" data-tab="formula">Формула Уилсона</div>
+            <div class="tabs__caption" data-tab="postavka">Поставка</div>
+            <div class="tabs__caption" data-tab="deficit">Дефицит</div>
+          </div>
+          <div class="tabs__body">
+            <div class="tabs__content" data-tab="formula">
+              <div class="main__content">
+                <img class="main__img" src="/imgs/formula.png" alt="" />
+                <div class="main__input">
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Затраты на поставку единицы материалов (Из)
+                    </div>
+                    <input id="IZ" type=number step=0.01 value="8.33"/>
+                  </div>
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Годовые затраты на содержание единицы запасов (Их)
+                    </div>
+                    <input id="IX" type=number step=0.01 value="0.1"/>
+                  </div>
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Годовая потребность в материале (Q) 
+                    </div>
+                    <input id="Q" type=number step=0.01 value="1500"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content" data-tab="postavka">
+              <div class="main__content">
+                <img class="main__img" src="/imgs/formulaSelf.png" alt="" />
+                <div class="main__input">
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Затраты на поставку единицы материалов (Из)
+                    </div>
+                    <input id="IZ" type=number step=0.01 value="8.33"/>
+                  </div>
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Годовые затраты на содержание единицы запасов (Их)
+                    </div>
+                    <input id="IX" type=number step=0.01 value="0.1"/>
+                  </div>
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Годовая потребность в материале (Q) 
+                    </div>
+                    <input id="Q" type=number step=0.01 value="1500"/>
+                  </div>
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Годовой объём производства (p)
+                    </div>
+                    <input id="P" type=number step=0.01 value="12000"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content" data-tab="deficit">
+              <div class="main__content">
+                <img class="main__img" src="/imgs/formulaDeficit.png" alt="" />
+                <div class="main__input">
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Затраты на поставку единицы материалов (Из)
+                    </div>
+                    <input id="IZ" type=number step=0.01 value="8.33"/>
+                  </div>
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Годовые затраты на содержание единицы запасов (Их)
+                    </div>
+                    <input id="IX" type=number step=0.01 value="0.1"/>
+                  </div>
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Годовая потребность в материале (Q) 
+                    </div>
+                    <input id="Q" type=number step=0.01 value="1500"/>
+                  </div>
+                  <div class="main__input-item">
+                    <div class="main__input-item-lable">
+                      Потери из-за дефицита единицы продукции (Д)
+                    </div>
+                    <input id="D" type=number step=0.01 value="0.2"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input class="main__btn" type="button" value="Рассчитать">
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
